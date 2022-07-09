@@ -37,8 +37,8 @@ class MainPage(BasePage):
 
     def check_presence_of_footer(self):
         with allure.step('Проверяем наличие футера'):
-            header = self.driver.find_element(*self.loc.footer)
-            assert header.is_displayed(), 'Футер не отображается на странице'
+            footer = self.driver.find_element(*self.loc.footer)
+            assert footer.is_displayed(), 'Футер не отображается на странице'
 
     def check_pages_response_200(self, urls):
         with allure.step('Отправляем запрос и проверяем на статус 200'):
